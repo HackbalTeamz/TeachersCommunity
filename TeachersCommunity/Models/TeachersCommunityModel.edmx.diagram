@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aa8b889388c04cc196c8b9db4dd07850" Name="Diagram1">
+        <EntityTypeShape EntityType="TeachersCommunityModel.AdminTbl" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.AnswersTbl" Width="1.5" PointX="9.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.AppointmentsTbl" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.CredentialTbl" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.QuestionTbl" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.RoleTbl" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.StudentTbl" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.StudyMaterialTbl" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.SubjectTbl" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.TeacherTbl" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_AdminTbl_CredentialTbl" ManuallyRouted="false" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_AnswersTbl_QuestionTbl" ManuallyRouted="false" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl" ManuallyRouted="false" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_CredentialTbl_RoleTbl" ManuallyRouted="false" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_StudentTbl_CredentialTbl" ManuallyRouted="false" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_TeacherTbl_CredentialTbl" ManuallyRouted="false" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_QuestionTbl_QuestionTbl" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
