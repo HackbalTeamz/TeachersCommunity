@@ -96,8 +96,65 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\HomePage\aos.css" />
+    <Content Include="Content\HomePage\bootstrap.min.css" />
+    <Content Include="Content\HomePage\boxicons.min.css" />
+    <Content Include="Content\HomePage\icofont.min.css" />
+    <Content Include="Content\HomePage\owl.carousel.min.css" />
+    <Content Include="Content\HomePage\style.css" />
+    <Content Include="Content\HomePage\venobox.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="DataBase\Schema.sql" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\HomePage\boxicons.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\about.jpg" />
+    <Content Include="Images\apple-touch-icon.png" />
+    <Content Include="Images\clients\client-1.png" />
+    <Content Include="Images\clients\client-2.png" />
+    <Content Include="Images\clients\client-3.png" />
+    <Content Include="Images\clients\client-4.png" />
+    <Content Include="Images\clients\client-5.png" />
+    <Content Include="Images\clients\client-6.png" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\featured-1.png" />
+    <Content Include="Images\featured-2.png" />
+    <Content Include="Images\featured-3.png" />
+    <Content Include="Images\featured-4.png" />
+    <Content Include="Images\footer-bg.jpg" />
+    <Content Include="Images\hero-bg.png" />
+    <Content Include="Images\hero-logo.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\portfolio-details-1.jpg" />
+    <Content Include="Images\portfolio-details-2.jpg" />
+    <Content Include="Images\portfolio-details-3.jpg" />
+    <Content Include="Images\portfolio\portfolio-1.jpg" />
+    <Content Include="Images\portfolio\portfolio-2.jpg" />
+    <Content Include="Images\portfolio\portfolio-3.jpg" />
+    <Content Include="Images\portfolio\portfolio-4.jpg" />
+    <Content Include="Images\portfolio\portfolio-5.jpg" />
+    <Content Include="Images\portfolio\portfolio-6.jpg" />
+    <Content Include="Images\portfolio\portfolio-7.jpg" />
+    <Content Include="Images\portfolio\portfolio-8.jpg" />
+    <Content Include="Images\portfolio\portfolio-9.jpg" />
+    <Content Include="Images\services.jpg" />
+    <Content Include="Images\team\team-1.jpg" />
+    <Content Include="Images\team\team-2.jpg" />
+    <Content Include="Images\team\team-3.jpg" />
+    <Content Include="Images\team\team-4.jpg" />
+    <Content Include="Images\team\team-5.jpg" />
+    <Content Include="Images\team\team-6.jpg" />
+    <Content Include="Images\testimonials-bg.jpg" />
+    <Content Include="Images\testimonials\testimonials-1.jpg" />
+    <Content Include="Images\testimonials\testimonials-2.jpg" />
+    <Content Include="Images\testimonials\testimonials-3.jpg" />
+    <Content Include="Images\testimonials\testimonials-4.jpg" />
+    <Content Include="Images\testimonials\testimonials-5.jpg" />
+    <Content Include="Images\why-us.jpg" />
     <Content Include="Models\TeachersCommunityModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TeachersCommunityModel.Context.cs</LastGenOutput>
@@ -108,10 +165,35 @@
       <DependentUpon>TeachersCommunityModel.edmx</DependentUpon>
       <LastGenOutput>TeachersCommunityModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\HomePage\icofont.woff" />
+    <Content Include="fonts\HomePage\icofont.woff2" />
+    <Content Include="fonts\HomePage\boxicons.eot" />
+    <Content Include="fonts\HomePage\boxicons.ttf" />
+    <Content Include="fonts\HomePage\boxicons.woff" />
+    <Content Include="fonts\HomePage\boxicons.woff2" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\HomePage\aos.js" />
+    <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\HomePage\isotope.pkgd.min.js" />
+    <Content Include="Scripts\HomePage\jquery.easing.min.js" />
+    <Content Include="Scripts\HomePage\jquery.min.js" />
+    <Content Include="Scripts\HomePage\jquery.sticky.js" />
+    <Content Include="Scripts\HomePage\main.js" />
+    <Content Include="Scripts\HomePage\owl.carousel.min.js" />
+    <Content Include="Scripts\HomePage\validate.js" />
+    <Content Include="Scripts\HomePage\venobox.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -172,7 +254,22 @@
     <Content Include="Models\TeachersCommunityModel.edmx.diagram">
       <DependentUpon>TeachersCommunityModel.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -182,7 +279,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
