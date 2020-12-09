@@ -195,8 +195,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AboutController.cs" />
-    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HobbyClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TutionController.cs" />
@@ -274,10 +272,10 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Tution\Index.cshtml" />
     <Content Include="Views\HobbyClasses\Index.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
