@@ -128,6 +128,7 @@
     <Content Include="Images\footer-bg.jpg" />
     <Content Include="Images\hero-bg.png" />
     <Content Include="Images\hero-logo.png" />
+    <Content Include="Images\image1.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\portfolio-details-1.jpg" />
     <Content Include="Images\portfolio-details-2.jpg" />
@@ -142,6 +143,7 @@
     <Content Include="Images\portfolio\portfolio-8.jpg" />
     <Content Include="Images\portfolio\portfolio-9.jpg" />
     <Content Include="Images\services.jpg" />
+    <Content Include="Images\Teacherscommunity1.png" />
     <Content Include="Images\team\team-1.jpg" />
     <Content Include="Images\team\team-2.jpg" />
     <Content Include="Images\team\team-3.jpg" />
@@ -194,7 +196,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HobbyClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TutionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -270,6 +275,9 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Tution\Index.cshtml" />
+    <Content Include="Views\HobbyClasses\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
