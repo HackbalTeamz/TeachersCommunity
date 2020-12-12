@@ -44,10 +44,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
@@ -120,14 +120,18 @@
     <Content Include="Images\clients\client-4.png" />
     <Content Include="Images\clients\client-5.png" />
     <Content Include="Images\clients\client-6.png" />
+    <Content Include="Images\community_logo.png" />
+    <Content Include="Images\community_logo_copy.png" />
+    <Content Include="Images\design.jpg" />
     <Content Include="Images\favicon.png" />
     <Content Include="Images\featured-1.png" />
     <Content Include="Images\featured-2.png" />
     <Content Include="Images\featured-3.png" />
     <Content Include="Images\featured-4.png" />
     <Content Include="Images\footer-bg.jpg" />
-    <Content Include="Images\hero-bg.png" />
     <Content Include="Images\hero-logo.png" />
+    <Content Include="Images\hero_bg.jpg" />
+    <Content Include="Images\home.jpg" />
     <Content Include="Images\image1.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\portfolio-details-1.jpg" />
@@ -175,6 +179,7 @@
     <Content Include="fonts\HomePage\boxicons.ttf" />
     <Content Include="fonts\HomePage\boxicons.woff" />
     <Content Include="fonts\HomePage\boxicons.woff2" />
+    <Content Include="Areas\Admin\Views\web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\HomePage\aos.js" />
     <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />
@@ -195,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\HobbyClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TutionController.cs" />
@@ -285,6 +291,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Views\AdminTbls\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
