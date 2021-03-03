@@ -32,7 +32,12 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
         </li>
-        <li class="@Html.IsSelected(controller: "VideoConference") treeview">
+        <li class="@Html.IsSelected(controller: "SearchTeachers")">
+            <a href="@Url.Action("Index", "SearchTeachers")">
+                <i class="fa fa-dashboard"></i> <span>Search Teachers</span>
+            </a>
+        </li>
+        @*<li class="@Html.IsSelected(controller: "VideoConference") treeview">
             <a href="@Url.Action("LiveClass", "VideoConference")">
                 <i class="fa fa-television"></i> <span>Classroom</span>
                 <span class="pull-right-container">
@@ -78,7 +83,7 @@
             <ul class="treeview-menu">
                 <li class="@Html.IsSelected(action: "ExamDashboard")"><a href="@Url.Action("ExamDashboard", "Exams")"><i class="fa fa-bar-chart"></i> Exam Dashboard</a></li>
             </ul>
-        </li>
+        </li>*@
 
         @*<li class="@Html.IsSelected(controller: "Layout") treeview">
             <a href="@Url.Action("Fixed", "Layout")">

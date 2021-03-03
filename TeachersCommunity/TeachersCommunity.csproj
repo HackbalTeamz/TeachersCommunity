@@ -219,6 +219,9 @@
     <Content Include="Areas\Admin\Views\RoleTbls\Details.cshtml" />
     <Content Include="Areas\Admin\Views\RoleTbls\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\RoleTbls\Index.cshtml" />
+    <Content Include="Areas\Student\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Student\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Student\Views\SearchTeachers\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\HomePage\aos.js" />
     <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />
@@ -244,6 +247,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoleTblsController.cs" />
+    <Compile Include="Areas\Student\Controllers\SearchTeachersController.cs" />
     <Compile Include="Areas\Student\Controllers\StudentController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Areas\Teachers\Controllers\TeachersController.cs" />
@@ -305,7 +309,11 @@
       <DependentUpon>TeachersCommunityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ErrorVM.cs" />
+    <Compile Include="ViewModel\MessageResponce.cs" />
     <Compile Include="ViewModel\RegistrationVM.cs" />
+    <Compile Include="ViewModel\StaffDashboardVM.cs" />
+    <Compile Include="ViewModel\StudentDashboardVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

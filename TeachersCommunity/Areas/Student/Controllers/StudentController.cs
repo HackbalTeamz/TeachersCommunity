@@ -11,7 +11,8 @@ namespace TeachersCommunity.Areas.Student.Controllers
         // GET: Student/Student
         public ActionResult Dashboard()
         {
-            return View();
+            StudentDashboardVM studentDashboardVM = new StudentDashboardVM();
+            return View(studentDashboardVM);
         }
     }
 }

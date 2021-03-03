@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Areas/Student/Views/Shared/_StudentBase.cshtml";
+}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            Dashboard
+            <small>Version 2.0</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Quick Example</h3>
+                    </div>
+                    <form role="form" action="" method="post">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Location</label>
+                                <input type="text" name="Location" class="form-control" id="exampleInputEmail1" placeholder="Enter Location">
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="clearfix visible-sm-block"></div>
+            
+        </div>
+        <div class="row">
+            @if (Model.teacherTbllist != null)
+            {
+                    foreach (var item in Model.teacherTbllist)
+                    {
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-aqua"><i class="fa fa-video-camera"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">@item.FullName</span>
+                                    <span class="info-box-number">0 Videos</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <!-- /.info-box -->
+                        </div>
+                    }
+
+            }
+
+        </div>
+    </section>
+</div>
+
+@section Scripts
+{
+}
