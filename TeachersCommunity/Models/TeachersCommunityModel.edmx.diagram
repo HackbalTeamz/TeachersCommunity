@@ -11,17 +11,17 @@
         <EntityTypeShape EntityType="TeachersCommunityModel.CredentialTbl" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="TeachersCommunityModel.QuestionTbl" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="TeachersCommunityModel.RoleTbl" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.StudentTbl" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="TeachersCommunityModel.StudyMaterialTbl" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TeachersCommunityModel.SubjectTbl" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.TeacherTbl" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
         <AssociationConnector Association="TeachersCommunityModel.FK_AdminTbl_CredentialTbl" ManuallyRouted="false" />
         <AssociationConnector Association="TeachersCommunityModel.FK_AnswersTbl_QuestionTbl" ManuallyRouted="false" />
-        <AssociationConnector Association="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl" ManuallyRouted="false" />
         <AssociationConnector Association="TeachersCommunityModel.FK_CredentialTbl_RoleTbl" ManuallyRouted="false" />
-        <AssociationConnector Association="TeachersCommunityModel.FK_StudentTbl_CredentialTbl" ManuallyRouted="false" />
-        <AssociationConnector Association="TeachersCommunityModel.FK_TeacherTbl_CredentialTbl" ManuallyRouted="false" />
-        <AssociationConnector Association="TeachersCommunityModel.FK_QuestionTbl_QuestionTbl" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.StudentTbl" Width="1.5" PointX="5.25" PointY="8.5" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.TeacherTbl" Width="1.5" PointX="5.25" PointY="4.5" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_StudentTbl_CredentialTbl" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_TeacherTbl_CredentialTbl" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_QuestionTbl_QuestionTbl" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

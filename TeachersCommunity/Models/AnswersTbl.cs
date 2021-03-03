@@ -20,6 +20,7 @@ namespace TeachersCommunity.Models
         public string Answer { get; set; }
         public System.DateTime AnsweredOn { get; set; }
         public Nullable<System.DateTime> UpdatedOn { get; set; }
+        public Nullable<System.DateTime> EnteredOn { get; set; }
     
         public virtual QuestionTbl QuestionTbl { get; set; }
         public virtual TeacherTbl TeacherTbl { get; set; }

@@ -14,5 +14,8 @@ namespace TeachersCommunity
         public StudentTbl studentTbl { get; set; }
         public TeacherTbl teacherTbl { get; set; }
         public string Name { get; set; }
+        public string Location { get; set; }
+        public string Gender { get; set; }
+        public string Phone { get; set; }
     }
 }
