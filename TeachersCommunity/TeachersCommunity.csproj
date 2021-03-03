@@ -200,6 +200,12 @@
     <Content Include="Areas\Admin\Views\Shared\_AdminFooter.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminHeader.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminSidebar.cshtml" />
+    <Content Include="Areas\Student\Views\web.config" />
+    <Content Include="Areas\Student\Views\Student\Dashboard.cshtml" />
+    <Content Include="Areas\Student\Views\Shared\_StudentBase.cshtml" />
+    <Content Include="Areas\Student\Views\Shared\_StudentFooter.cshtml" />
+    <Content Include="Areas\Student\Views\Shared\_StudentHeader.cshtml" />
+    <Content Include="Areas\Student\Views\Shared\_StudentSidebar.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\HomePage\aos.js" />
     <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />
@@ -224,6 +230,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Student\Controllers\StudentController.cs" />
+    <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HobbyClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -324,8 +332,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Student\Data\" />
     <Folder Include="Views\AdminTbls\" />
-    <Folder Include="Views\Student\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
