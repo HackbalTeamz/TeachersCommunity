@@ -35,5 +35,7 @@ namespace TeachersCommunity.Models
         public virtual DbSet<StudyMaterialTbl> StudyMaterialTbls { get; set; }
         public virtual DbSet<SubjectTbl> SubjectTbls { get; set; }
         public virtual DbSet<TeacherTbl> TeacherTbls { get; set; }
+
+        public System.Data.Entity.DbSet<TeachersCommunity.RegistrationVM> RegistrationVMs { get; set; }
     }
 }

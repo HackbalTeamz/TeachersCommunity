@@ -23,13 +23,31 @@ namespace TeachersCommunity.Controllers
             {
                 if(credentialTbl.RoleID == Convert.ToInt32(ConstantValue.Student))
                 {
-                    return RedirectToAction("Dashboard", "Student");
+                    return RedirectToAction("Dashboard", "Student/Student");
                 }
                 else if (credentialTbl.RoleID == Convert.ToInt32(ConstantValue.Admin))
                 {
                     return RedirectToAction("Dashboard", "Admin/Admin");
                 }
+                else if (credentialTbl.RoleID == Convert.ToInt32(ConstantValue.Teachers))
+                {
+                    return RedirectToAction("Dashboard", "Teachers/Teachers");
+                }
             }
+            return View();
+        }
+        public ActionResult Register()
+        {
+            ViewBag.RoleID = new SelectList(db.RoleTbls, "RoleID", "RoleName");
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Register(RegistrationVM registrationVM)
+        {
+            registrationVM.credentialTbl.EnteredOn = DateTime.Now;
+            registrationVM.credentialTbl.UpdatedOn = DateTime.Now;
+            db.CredentialTbls.Add(registrationVM.credentialTbl);
+            db.SaveChanges();
             return View();
         }
     }

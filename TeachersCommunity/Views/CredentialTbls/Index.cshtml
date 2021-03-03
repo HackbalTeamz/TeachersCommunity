@@ -1,0 +1,87 @@
+﻿@model IEnumerable<TeachersCommunity.Models.CredentialTbl>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsEmailverify)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsPhoneVerify)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PasswordResetCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailVerificationCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneVerificationCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnteredOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleTbl.RoleName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsEmailverify)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsPhoneVerify)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PasswordResetCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailVerificationCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneVerificationCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnteredOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleTbl.RoleName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CredID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CredID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CredID })
+        </td>
+    </tr>
+}
+
+</table>
