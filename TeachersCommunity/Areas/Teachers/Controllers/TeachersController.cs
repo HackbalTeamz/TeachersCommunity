@@ -9,7 +9,7 @@ namespace TeachersCommunity.Areas.Teachers.Controllers
     public class TeachersController : Controller
     {
         // GET: Teachers/Teachers
-        public ActionResult Index()
+        public ActionResult Dashboard()
         {
             return View();
         }
