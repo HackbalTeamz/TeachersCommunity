@@ -1780,6 +1780,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\HomePage\aos.css" />
+    <Content Include="Content\HomePage\bootstrap-icons.css" />
     <Content Include="Content\HomePage\bootstrap.min.css" />
     <Content Include="Content\HomePage\boxicons.min.css" />
     <Content Include="Content\HomePage\icofont.min.css" />
