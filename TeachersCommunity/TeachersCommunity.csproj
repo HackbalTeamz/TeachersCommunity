@@ -1789,6 +1789,7 @@
     <Content Include="Content\LoginPage\bootstrap.min.css" />
     <Content Include="Content\LoginPage\font-awesome.min.css" />
     <Content Include="Content\LoginPage\main.css" />
+    <Content Include="Content\LoginPage\style.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="DataBase\Schema.sql" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -5946,6 +5947,11 @@
     <Content Include="Scripts\LoginPage\jquery-3.2.1.min.js" />
     <Content Include="Scripts\LoginPage\main.js" />
     <Content Include="Scripts\LoginPage\tilt.jquery.min.js" />
+    <Content Include="Scripts\LoginPanel\adminplus.js" />
+    <Content Include="Scripts\LoginPanel\bootstrap.min.js" />
+    <Content Include="Scripts\LoginPanel\jquery.min.js" />
+    <Content Include="Scripts\LoginPanel\main.min.js" />
+    <Content Include="Scripts\LoginPanel\tether.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -6071,6 +6077,7 @@
     <Content Include="Views\CredentialTbls\Edit.cshtml" />
     <Content Include="Views\CredentialTbls\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -6082,6 +6089,7 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Student\Data\" />
     <Folder Include="Areas\Teachers\Data\" />
+    <Folder Include="Content\LoginPanel\" />
     <Folder Include="Views\AdminTbls\" />
   </ItemGroup>
   <ItemGroup>

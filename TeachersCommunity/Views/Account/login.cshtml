@@ -1,19 +1,7 @@
 ﻿
 @{
-    ViewBag.Title = "Login";
-    Layout = "~/Views/Shared/_HomeLayout.cshtml";
-    
+    Layout = null;
 }
-
-@*<h2>Index</h2>*@
-
-@*@using (html.beginform())
-{
-    <input type="text" name="email" />
-    <input type="text" name="password" />
-    <input type="submit" />
-
-}*@
 
 <!DOCTYPE html>
 <html>
@@ -34,8 +22,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
 
     <!-- App CSS -->
-    @*<link type="text/css" href="assets/css/style.min.css" rel="stylesheet@*">*@
-    <link href="~/Content/LoginPage/style.min.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/style.min.css" rel="stylesheet">
+
 </head>
 
 <body class="login">
@@ -79,23 +67,19 @@
         </div>
     </div>
 
-    @*jQuery
-        <script src="assets/vendor/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
 
-        Bootstrap
-        <script src="assets/vendor/tether.min.js"></script>
-        <script src="assets/vendor/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/vendor/tether.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
 
-        AdminPlus
-        <script src="assets/vendor/adminplus.js"></script>
+    <!-- AdminPlus -->
+    <script src="assets/vendor/adminplus.js"></script>
 
-        App JS
-        <script src="assets/js/main.min.js"></script>*@
-    <script src="~/Scripts/LoginPanel/jquery.min.js"></script>
-    <script src="~/Scripts/LoginPanel/tether.min.js"></script>
-    <script src="~/Scripts/LoginPanel/bootstrap.min.js"></script>
-    <script src="~/Scripts/LoginPanel/adminplus.js"></script>
-    <script src="~/Scripts/LoginPanel/main.min.js"></script>
+    <!-- App JS -->
+    <script src="assets/js/main.min.js"></script>
+
 </body>
 
 </html>
