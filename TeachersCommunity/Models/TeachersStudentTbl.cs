@@ -18,5 +18,8 @@ namespace TeachersCommunity.Models
         public Nullable<long> StudentId { get; set; }
         public Nullable<long> TeacherId { get; set; }
         public Nullable<bool> IsApprove { get; set; }
+    
+        public virtual StudentTbl StudentTbl { get; set; }
+        public virtual TeacherTbl TeacherTbl { get; set; }
     }
 }

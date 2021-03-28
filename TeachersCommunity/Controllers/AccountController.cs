@@ -24,7 +24,8 @@ namespace TeachersCommunity.Controllers
             {
                 if(credentialTbl.RoleID == Convert.ToInt32(ConstantValue.Student))
                 {
-                    
+                    StudentTbl studentTbl = db.StudentTbls.Where(x => x.CredID == credentialTbl.CredID).FirstOrDefault();
+                    FormsAuthentication.SetAuthCookie(Convert.ToString(studentTbl.StudentID + "|" + ConstantValue.Student), false);
                     return RedirectToAction("Dashboard", "Student/Student");
                 }
                 else if (credentialTbl.RoleID == Convert.ToInt32(ConstantValue.Admin))

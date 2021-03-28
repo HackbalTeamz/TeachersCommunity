@@ -11,12 +11,21 @@
     </section>
     <section class="content">
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="info-box">
                     <span class="info-box-icon bg-aqua"><i class="fa fa-video-camera"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">@Model.teacherTbl.FullName</span>
-                        <span class="info-box-number">@Model.teacherTbl.Location</span>
+                        <span class="info-box-text">Name @Model.teacherTbl.FullName</span>
+                        <span class="info-box-number">Location @Model.teacherTbl.Location</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="fa fa-video-camera"></i></span>
+                    <div class="info-box-content">
                         @if (Model.teacherTbl.IsOffline)
                         {
                             <span class="info-box-number">Offline Class @Model.teacherTbl.OfflineTime</span>
@@ -37,7 +46,11 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <iframe width="560" height="315" src="@Model.teacherTbl.DemoClassURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="~/Student/TeacherDetails/Interest/@Model.teacherTbl.TeacherID">Interested</a>
+            </div>
         </div>
     </section>
 </div>

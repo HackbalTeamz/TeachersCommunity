@@ -5,25 +5,27 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="aa8b889388c04cc196c8b9db4dd07850" Name="Diagram1">
-        <EntityTypeShape EntityType="TeachersCommunityModel.AdminTbl" Width="1.5" PointX="5.25" PointY="5.25" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.AnswersTbl" Width="1.5" PointX="9.75" PointY="5" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.AdminTbl" Width="1.5" PointX="5.25" PointY="2.25" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.AnswersTbl" Width="1.5" PointX="9.75" PointY="9" />
         <EntityTypeShape EntityType="TeachersCommunityModel.AppointmentsTbl" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.CredentialTbl" Width="1.5" PointX="3" PointY="4.75" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.QuestionTbl" Width="1.5" PointX="7.5" PointY="8.875" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.RoleTbl" Width="1.5" PointX="0.75" PointY="5.875" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.StudentTbl" Width="1.5" PointX="5.25" PointY="8.125" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.CredentialTbl" Width="1.5" PointX="3" PointY="6.5" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.QuestionTbl" Width="1.5" PointX="7.5" PointY="6.125" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.RoleTbl" Width="1.5" PointX="0.75" PointY="7.625" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.StudentTbl" Width="1.5" PointX="5.25" PointY="5.25" />
         <EntityTypeShape EntityType="TeachersCommunityModel.StudyMaterialTbl" Width="1.5" PointX="7.75" PointY="0.75" />
         <EntityTypeShape EntityType="TeachersCommunityModel.SubjectTbl" Width="1.5" PointX="9.75" PointY="0.75" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.TeachersStudentTbl" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.TeachersStudentTbl" Width="1.5" PointX="7.5" PointY="9.75" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.TeacherTbl" Width="1.5" PointX="5.25" PointY="10.125" />
         <AssociationConnector Association="TeachersCommunityModel.FK_AdminTbl_CredentialTbl" />
         <AssociationConnector Association="TeachersCommunityModel.FK_AnswersTbl_QuestionTbl" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl" />
         <AssociationConnector Association="TeachersCommunityModel.FK_CredentialTbl_RoleTbl" />
         <AssociationConnector Association="TeachersCommunityModel.FK_StudentTbl_CredentialTbl" />
-        <AssociationConnector Association="TeachersCommunityModel.FK_QuestionTbl_QuestionTbl" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.TeacherTbl" Width="1.5" PointX="5.25" PointY="0.75" />
-        <AssociationConnector Association="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl" />
         <AssociationConnector Association="TeachersCommunityModel.FK_TeacherTbl_CredentialTbl" />
-        </Diagram>
+        <AssociationConnector Association="TeachersCommunityModel.FK_QuestionTbl_QuestionTbl" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_TeachersStudentTbl_StudentTbl" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_TeachersStudentTbl_TeacherTbl" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

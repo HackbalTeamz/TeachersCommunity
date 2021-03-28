@@ -214,6 +214,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TeachersStudentTbl_StudentTbl">
+          <End Role="StudentTbl" Type="Self.StudentTbl" Multiplicity="0..1" />
+          <End Role="TeachersStudentTbl" Type="Self.TeachersStudentTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentTbl">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="TeachersStudentTbl">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeachersStudentTbl_TeacherTbl">
+          <End Role="TeacherTbl" Type="Self.TeacherTbl" Multiplicity="0..1" />
+          <End Role="TeachersStudentTbl" Type="Self.TeachersStudentTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TeacherTbl">
+              <PropertyRef Name="TeacherID" />
+            </Principal>
+            <Dependent Role="TeachersStudentTbl">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TeacherTbl_CredentialTbl">
           <End Role="CredentialTbl" Type="Self.CredentialTbl" Multiplicity="1" />
           <End Role="TeacherTbl" Type="Self.TeacherTbl" Multiplicity="*" />
@@ -262,6 +286,14 @@
             <End Role="CredentialTbl" EntitySet="CredentialTbl" />
             <End Role="StudentTbl" EntitySet="StudentTbl" />
           </AssociationSet>
+          <AssociationSet Name="FK_TeachersStudentTbl_StudentTbl" Association="Self.FK_TeachersStudentTbl_StudentTbl">
+            <End Role="StudentTbl" EntitySet="StudentTbl" />
+            <End Role="TeachersStudentTbl" EntitySet="TeachersStudentTbl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeachersStudentTbl_TeacherTbl" Association="Self.FK_TeachersStudentTbl_TeacherTbl">
+            <End Role="TeacherTbl" EntitySet="TeacherTbl" />
+            <End Role="TeachersStudentTbl" EntitySet="TeachersStudentTbl" />
+          </AssociationSet>
           <AssociationSet Name="FK_TeacherTbl_CredentialTbl" Association="Self.FK_TeacherTbl_CredentialTbl">
             <End Role="CredentialTbl" EntitySet="CredentialTbl" />
             <End Role="TeacherTbl" EntitySet="TeacherTbl" />
@@ -282,12 +314,17 @@
           <EntitySet Name="StudyMaterialTbls" EntityType="TeachersCommunityModel.StudyMaterialTbl" />
           <EntitySet Name="SubjectTbls" EntityType="TeachersCommunityModel.SubjectTbl" />
           <EntitySet Name="TeachersStudentTbls" EntityType="TeachersCommunityModel.TeachersStudentTbl" />
+          <EntitySet Name="TeacherTbls" EntityType="TeachersCommunityModel.TeacherTbl" />
           <AssociationSet Name="FK_AdminTbl_CredentialTbl" Association="TeachersCommunityModel.FK_AdminTbl_CredentialTbl">
             <End Role="CredentialTbl" EntitySet="CredentialTbls" />
             <End Role="AdminTbl" EntitySet="AdminTbls" />
           </AssociationSet>
           <AssociationSet Name="FK_AnswersTbl_QuestionTbl" Association="TeachersCommunityModel.FK_AnswersTbl_QuestionTbl">
             <End Role="QuestionTbl" EntitySet="QuestionTbls" />
+            <End Role="AnswersTbl" EntitySet="AnswersTbls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnswersTbl_TeacherTbl" Association="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl">
+            <End Role="TeacherTbl" EntitySet="TeacherTbls" />
             <End Role="AnswersTbl" EntitySet="AnswersTbls" />
           </AssociationSet>
           <AssociationSet Name="FK_CredentialTbl_RoleTbl" Association="TeachersCommunityModel.FK_CredentialTbl_RoleTbl">
@@ -298,20 +335,23 @@
             <End Role="CredentialTbl" EntitySet="CredentialTbls" />
             <End Role="StudentTbl" EntitySet="StudentTbls" />
           </AssociationSet>
-          <AssociationSet Name="FK_QuestionTbl_QuestionTbl" Association="TeachersCommunityModel.FK_QuestionTbl_QuestionTbl">
-            <End Role="StudentTbl" EntitySet="StudentTbls" />
-            <End Role="QuestionTbl" EntitySet="QuestionTbls" />
-          </AssociationSet>
-          <EntitySet Name="TeacherTbls" EntityType="TeachersCommunityModel.TeacherTbl" />
-          <AssociationSet Name="FK_AnswersTbl_TeacherTbl" Association="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl">
-            <End Role="TeacherTbl" EntitySet="TeacherTbls" />
-            <End Role="AnswersTbl" EntitySet="AnswersTbls" />
-          </AssociationSet>
           <AssociationSet Name="FK_TeacherTbl_CredentialTbl" Association="TeachersCommunityModel.FK_TeacherTbl_CredentialTbl">
             <End Role="CredentialTbl" EntitySet="CredentialTbls" />
             <End Role="TeacherTbl" EntitySet="TeacherTbls" />
           </AssociationSet>
-          </EntityContainer>
+          <AssociationSet Name="FK_QuestionTbl_QuestionTbl" Association="TeachersCommunityModel.FK_QuestionTbl_QuestionTbl">
+            <End Role="StudentTbl" EntitySet="StudentTbls" />
+            <End Role="QuestionTbl" EntitySet="QuestionTbls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeachersStudentTbl_StudentTbl" Association="TeachersCommunityModel.FK_TeachersStudentTbl_StudentTbl">
+            <End Role="StudentTbl" EntitySet="StudentTbls" />
+            <End Role="TeachersStudentTbl" EntitySet="TeachersStudentTbls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeachersStudentTbl_TeacherTbl" Association="TeachersCommunityModel.FK_TeachersStudentTbl_TeacherTbl">
+            <End Role="TeacherTbl" EntitySet="TeacherTbls" />
+            <End Role="TeachersStudentTbl" EntitySet="TeachersStudentTbls" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="AdminTbl">
           <Key>
             <PropertyRef Name="AdminID" />
@@ -411,6 +451,7 @@
           <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
           <NavigationProperty Name="CredentialTbl" Relationship="TeachersCommunityModel.FK_StudentTbl_CredentialTbl" FromRole="StudentTbl" ToRole="CredentialTbl" />
           <NavigationProperty Name="QuestionTbls" Relationship="TeachersCommunityModel.FK_QuestionTbl_QuestionTbl" FromRole="StudentTbl" ToRole="QuestionTbl" />
+          <NavigationProperty Name="TeachersStudentTbls" Relationship="TeachersCommunityModel.FK_TeachersStudentTbl_StudentTbl" FromRole="StudentTbl" ToRole="TeachersStudentTbl" />
         </EntityType>
         <EntityType Name="StudyMaterialTbl">
           <Key>
@@ -440,6 +481,31 @@
           <Property Name="StudentId" Type="Int64" />
           <Property Name="TeacherId" Type="Int64" />
           <Property Name="IsApprove" Type="Boolean" />
+          <NavigationProperty Name="StudentTbl" Relationship="TeachersCommunityModel.FK_TeachersStudentTbl_StudentTbl" FromRole="TeachersStudentTbl" ToRole="StudentTbl" />
+          <NavigationProperty Name="TeacherTbl" Relationship="TeachersCommunityModel.FK_TeachersStudentTbl_TeacherTbl" FromRole="TeachersStudentTbl" ToRole="TeacherTbl" />
+        </EntityType>
+        <EntityType Name="TeacherTbl">
+          <Key>
+            <PropertyRef Name="TeacherID" />
+          </Key>
+          <Property Name="TeacherID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CredID" Type="Int64" Nullable="false" />
+          <Property Name="FullName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EnterdOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsOffline" Type="Boolean" />
+          <Property Name="OfflineTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsOnline" Type="Boolean" />
+          <Property Name="OnlineTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Days" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DemoClassURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AnswersTbls" Relationship="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl" FromRole="TeacherTbl" ToRole="AnswersTbl" />
+          <NavigationProperty Name="CredentialTbl" Relationship="TeachersCommunityModel.FK_TeacherTbl_CredentialTbl" FromRole="TeacherTbl" ToRole="CredentialTbl" />
+          <NavigationProperty Name="TeachersStudentTbls" Relationship="TeachersCommunityModel.FK_TeachersStudentTbl_TeacherTbl" FromRole="TeacherTbl" ToRole="TeachersStudentTbl" />
         </EntityType>
         <Association Name="FK_AdminTbl_CredentialTbl">
           <End Type="TeachersCommunityModel.CredentialTbl" Role="CredentialTbl" Multiplicity="1" />
@@ -462,6 +528,18 @@
             </Principal>
             <Dependent Role="AnswersTbl">
               <PropertyRef Name="QuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnswersTbl_TeacherTbl">
+          <End Type="TeachersCommunityModel.TeacherTbl" Role="TeacherTbl" Multiplicity="1" />
+          <End Type="TeachersCommunityModel.AnswersTbl" Role="AnswersTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TeacherTbl">
+              <PropertyRef Name="TeacherID" />
+            </Principal>
+            <Dependent Role="AnswersTbl">
+              <PropertyRef Name="TeacherID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -489,6 +567,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TeacherTbl_CredentialTbl">
+          <End Type="TeachersCommunityModel.CredentialTbl" Role="CredentialTbl" Multiplicity="1" />
+          <End Type="TeachersCommunityModel.TeacherTbl" Role="TeacherTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CredentialTbl">
+              <PropertyRef Name="CredID" />
+            </Principal>
+            <Dependent Role="TeacherTbl">
+              <PropertyRef Name="CredID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_QuestionTbl_QuestionTbl">
           <End Type="TeachersCommunityModel.StudentTbl" Role="StudentTbl" Multiplicity="1" />
           <End Type="TeachersCommunityModel.QuestionTbl" Role="QuestionTbl" Multiplicity="*" />
@@ -501,49 +591,27 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="TeacherTbl">
-          <Key>
-            <PropertyRef Name="TeacherID" />
-          </Key>
-          <Property Name="TeacherID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CredID" Type="Int64" Nullable="false" />
-          <Property Name="FullName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="EnterdOn" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
-          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="IsOffline" Type="Boolean" />
-          <Property Name="OfflineTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="IsOnline" Type="Boolean" />
-          <Property Name="OnlineTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Days" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="DemoClassURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="AnswersTbls" Relationship="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl" FromRole="TeacherTbl" ToRole="AnswersTbl" />
-          <NavigationProperty Name="CredentialTbl" Relationship="TeachersCommunityModel.FK_TeacherTbl_CredentialTbl" FromRole="TeacherTbl" ToRole="CredentialTbl" />
-        </EntityType>
-        <Association Name="FK_AnswersTbl_TeacherTbl">
-          <End Type="TeachersCommunityModel.TeacherTbl" Role="TeacherTbl" Multiplicity="1" />
-          <End Type="TeachersCommunityModel.AnswersTbl" Role="AnswersTbl" Multiplicity="*" />
+        <Association Name="FK_TeachersStudentTbl_StudentTbl">
+          <End Type="TeachersCommunityModel.StudentTbl" Role="StudentTbl" Multiplicity="0..1" />
+          <End Type="TeachersCommunityModel.TeachersStudentTbl" Role="TeachersStudentTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentTbl">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="TeachersStudentTbl">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeachersStudentTbl_TeacherTbl">
+          <End Type="TeachersCommunityModel.TeacherTbl" Role="TeacherTbl" Multiplicity="0..1" />
+          <End Type="TeachersCommunityModel.TeachersStudentTbl" Role="TeachersStudentTbl" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TeacherTbl">
               <PropertyRef Name="TeacherID" />
             </Principal>
-            <Dependent Role="AnswersTbl">
-              <PropertyRef Name="TeacherID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TeacherTbl_CredentialTbl">
-          <End Type="TeachersCommunityModel.CredentialTbl" Role="CredentialTbl" Multiplicity="1" />
-          <End Type="TeachersCommunityModel.TeacherTbl" Role="TeacherTbl" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CredentialTbl">
-              <PropertyRef Name="CredID" />
-            </Principal>
-            <Dependent Role="TeacherTbl">
-              <PropertyRef Name="CredID" />
+            <Dependent Role="TeachersStudentTbl">
+              <PropertyRef Name="TeacherId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>

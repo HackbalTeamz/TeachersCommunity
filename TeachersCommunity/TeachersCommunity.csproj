@@ -5916,6 +5916,12 @@
     <Content Include="Areas\Teachers\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Teachers\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Teachers\Views\Teachers\ProfileEdit.cshtml" />
+    <Content Include="Areas\Teachers\Views\StudentList\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentTbls\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentTbls\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentTbls\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentTbls\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentTbls\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\HomePage\aos.js" />
     <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />
@@ -5950,11 +5956,13 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoleTblsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentTblsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherTblsController.cs" />
     <Compile Include="Areas\Student\Controllers\SearchTeachersController.cs" />
     <Compile Include="Areas\Student\Controllers\StudentController.cs" />
     <Compile Include="Areas\Student\Controllers\TeacherDetailsController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
+    <Compile Include="Areas\Teachers\Controllers\StudentListController.cs" />
     <Compile Include="Areas\Teachers\Controllers\TeachersController.cs" />
     <Compile Include="Areas\Teachers\TeachersAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />

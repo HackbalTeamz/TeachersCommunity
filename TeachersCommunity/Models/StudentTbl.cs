@@ -18,6 +18,7 @@ namespace TeachersCommunity.Models
         public StudentTbl()
         {
             this.QuestionTbls = new HashSet<QuestionTbl>();
+            this.TeachersStudentTbls = new HashSet<TeachersStudentTbl>();
         }
     
         public long StudentID { get; set; }
@@ -37,5 +38,7 @@ namespace TeachersCommunity.Models
         public virtual CredentialTbl CredentialTbl { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QuestionTbl> QuestionTbls { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TeachersStudentTbl> TeachersStudentTbls { get; set; }
     }
 }
