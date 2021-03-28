@@ -17,6 +17,7 @@ namespace TeachersCommunity
         //public List<VideoTbl> videoTbls { get; set; }
         //public OnlineExamVM onlineExamVM { get; set; }
         public List<TeacherTbl> teacherTbllist { get; set; } 
+        public TeacherTbl teacherTbl { get; set; }
     }
     public class SubjectVideoVM
     {

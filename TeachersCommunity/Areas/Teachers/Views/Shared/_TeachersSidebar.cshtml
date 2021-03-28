@@ -12,12 +12,17 @@
         </div>
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="@Html.IsSelected(controller: "ParentTbls")">
-                <a href="@Url.Action("Dashboard", "Staff")">
+            <li class="@Html.IsSelected(controller: "Teachers")">
+                <a href="@Url.Action("Dashboard", "Teachers")">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
-            <li class="@Html.IsSelected(controller: "ParentTbls") treeview">
+            <li class="@Html.IsSelected(controller: "Teachers")">
+                <a href="@Url.Action("Index", "Teachers")">
+                    <i class="fa fa-dashboard"></i> <span>StudentList</span>
+                </a>
+            </li>
+            @*<li class="@Html.IsSelected(controller: "ParentTbls") treeview">
                 <a href="@Url.Action("Index", "ParentTbls")">
                     <i class="fa fa-users"></i> <span>Parents</span>
                     <span class="pull-right-container">
@@ -105,7 +110,7 @@
                     <li class="@Html.IsSelected(action: "AttendanceReportGenerate")"><a href="@Url.Action("AttendanceReportGenerate", "Report")"><i class="fa fa-download"></i>Download Report</a></li>
                     <li class="@Html.IsSelected(action: "SubjectWiseReportGenerate")"><a href="@Url.Action("SubjectWiseReportGenerate", "Report")"><i class="fa fa-download"></i>Subject Wise Report</a></li>
                 </ul>
-            </li>
+            </li>*@
         </ul>
     </section>
 </aside>

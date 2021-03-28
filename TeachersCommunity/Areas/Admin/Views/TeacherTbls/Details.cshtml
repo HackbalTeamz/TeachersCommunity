@@ -1,0 +1,130 @@
+﻿@model TeachersCommunity.Models.TeacherTbl
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TeacherTbl</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnterdOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnterdOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsOffline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsOffline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfflineTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfflineTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsOnline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsOnline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnlineTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnlineTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Days)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Days)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DemoClassURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DemoClassURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CredentialTbl.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CredentialTbl.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TeacherID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

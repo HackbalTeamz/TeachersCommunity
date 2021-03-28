@@ -29,6 +29,12 @@ namespace TeachersCommunity.Models
         public string Gender { get; set; }
         public string Phone { get; set; }
         public string DOB { get; set; }
+        public Nullable<bool> IsOffline { get; set; }
+        public string OfflineTime { get; set; }
+        public Nullable<bool> IsOnline { get; set; }
+        public string OnlineTime { get; set; }
+        public string Days { get; set; }
+        public string DemoClassURL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AnswersTbl> AnswersTbls { get; set; }

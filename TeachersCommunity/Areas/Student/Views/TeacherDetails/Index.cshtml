@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Areas/Student/Views/Shared/_StudentBase.cshtml";
+}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            Teachers Details
+            <small>Version 2.0</small>
+        </h1>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="fa fa-video-camera"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">@Model.teacherTbl.FullName</span>
+                        <span class="info-box-number">@Model.teacherTbl.Location</span>
+                        @if (Model.teacherTbl.IsOffline)
+                        {
+                            <span class="info-box-number">Offline Class @Model.teacherTbl.OfflineTime</span>
+                        }
+                        @if (Model.teacherTbl.IsOnline)
+                        {
+                            <span class="info-box-number">Online Class @Model.teacherTbl.OnlineTime</span>
+                        }
+                        <span class="info-box-number">Days @Model.teacherTbl.Days</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <iframe width="560" height="315" src="@Model.teacherTbl.DemoClassURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+@section Scripts
+{
+}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using TeachersCommunity.Models;
 
 namespace TeachersCommunity.Controllers
@@ -23,6 +24,7 @@ namespace TeachersCommunity.Controllers
             {
                 if(credentialTbl.RoleID == Convert.ToInt32(ConstantValue.Student))
                 {
+                    
                     return RedirectToAction("Dashboard", "Student/Student");
                 }
                 else if (credentialTbl.RoleID == Convert.ToInt32(ConstantValue.Admin))
@@ -31,6 +33,8 @@ namespace TeachersCommunity.Controllers
                 }
                 else if (credentialTbl.RoleID == Convert.ToInt32(ConstantValue.Teachers))
                 {
+                    TeacherTbl teacherTbl = db.TeacherTbls.Where(x => x.CredID == credentialTbl.CredID).FirstOrDefault();
+                    FormsAuthentication.SetAuthCookie(Convert.ToString(teacherTbl.TeacherID + "|" + ConstantValue.Teachers), false);
                     return RedirectToAction("Dashboard", "Teachers/Teachers");
                 }
             }
