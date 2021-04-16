@@ -141,6 +141,7 @@
           <Property Name="OnlineTime" Type="varchar" MaxLength="50" />
           <Property Name="Days" Type="varchar" MaxLength="500" />
           <Property Name="DemoClassURL" Type="varchar" MaxLength="500" />
+          <Property Name="IsActive" Type="bit" />
         </EntityType>
         <Association Name="FK_AdminTbl_CredentialTbl">
           <End Role="CredentialTbl" Type="Self.CredentialTbl" Multiplicity="1" />
@@ -503,6 +504,7 @@
           <Property Name="OnlineTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Days" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="DemoClassURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" />
           <NavigationProperty Name="AnswersTbls" Relationship="TeachersCommunityModel.FK_AnswersTbl_TeacherTbl" FromRole="TeacherTbl" ToRole="AnswersTbl" />
           <NavigationProperty Name="CredentialTbl" Relationship="TeachersCommunityModel.FK_TeacherTbl_CredentialTbl" FromRole="TeacherTbl" ToRole="CredentialTbl" />
           <NavigationProperty Name="TeachersStudentTbls" Relationship="TeachersCommunityModel.FK_TeachersStudentTbl_TeacherTbl" FromRole="TeacherTbl" ToRole="TeachersStudentTbl" />
@@ -751,6 +753,7 @@
           <EntitySetMapping Name="TeacherTbls">
             <EntityTypeMapping TypeName="TeachersCommunityModel.TeacherTbl">
               <MappingFragment StoreEntitySet="TeacherTbl">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="DemoClassURL" ColumnName="DemoClassURL" />
                 <ScalarProperty Name="Days" ColumnName="Days" />
                 <ScalarProperty Name="OnlineTime" ColumnName="OnlineTime" />

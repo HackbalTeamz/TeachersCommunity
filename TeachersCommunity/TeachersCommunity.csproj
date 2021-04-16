@@ -5923,6 +5923,7 @@
     <Content Include="Areas\Admin\Views\StudentTbls\Details.cshtml" />
     <Content Include="Areas\Admin\Views\StudentTbls\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\StudentTbls\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TeacherTbls\ActivateTeachers.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\HomePage\aos.js" />
     <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />

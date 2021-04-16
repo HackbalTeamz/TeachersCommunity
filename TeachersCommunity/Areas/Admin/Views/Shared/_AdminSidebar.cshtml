@@ -22,17 +22,27 @@
                     <i class="fa fa-dashboard"></i> <span>Roles</span>
                 </a>
             </li>
-            @*<li class="@Html.IsSelected(controller: "ParentTbls") treeview">
-                <a href="@Url.Action("Index", "Admin/RoleTbls")">
-                    <i class="fa fa-users"></i> <span>Roles</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
+            <li class="@Html.IsSelected(controller: "StudentTbls")">
+                <a href="@Url.Action("Index", "StudentTbls")">
+                    <i class="fa fa-dashboard"></i> <span>Students</span>
                 </a>
-                <ul class="treeview-menu">
-                    <li class="@Html.IsSelected(action: "Index")"><a href="@Url.Action("Index", "Admin/RoleTbls")"><i class="fa fa-users"></i> Roles</a></li>
-                </ul>
-            </li>*@
+            </li>
+            <li class="@Html.IsSelected(controller: "TeacherTbls")">
+                <a href="@Url.Action("Index", "TeacherTbls")">
+                    <i class="fa fa-dashboard"></i> <span>Teachers</span>
+                </a>
+            </li>
+            @*<li class="@Html.IsSelected(controller: "ParentTbls") treeview">
+            <a href="@Url.Action("Index", "Admin/RoleTbls")">
+                <i class="fa fa-users"></i> <span>Roles</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                <li class="@Html.IsSelected(action: "Index")"><a href="@Url.Action("Index", "Admin/RoleTbls")"><i class="fa fa-users"></i> Roles</a></li>
+            </ul>
+        </li>*@
             @*<li class="@Html.IsSelected(controller: "StudentTbls") treeview">
             <a href="@Url.Action("Index", "StudentTbls")">
                 <i class="fa fa-users"></i> <span>Students</span>

@@ -88,10 +88,7 @@
             @Html.DisplayFor(modelItem => item.CredentialTbl.Email)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.TeacherID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.TeacherID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.TeacherID }) |
-            @Html.ActionLink("Activate/Deactivate", "StatusChange", new { id = item.TeacherID })
+            @Html.ActionLink("Activate/Deactivate", "StatusChange", new { id=item.TeacherID })
         </td>
     </tr>
 }

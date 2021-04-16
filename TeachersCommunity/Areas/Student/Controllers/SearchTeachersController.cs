@@ -20,7 +20,7 @@ namespace TeachersCommunity.Areas.Student.Controllers
         public ActionResult Index(string Location)
         {
             StudentDashboardVM studentDashboardVM = new StudentDashboardVM();
-            studentDashboardVM.teacherTbllist = db.TeacherTbls.Where(c => c.Location.Contains(Location)).ToList();
+            studentDashboardVM.teacherTbllist = db.TeacherTbls.Where(c => c.Location.Contains(Location)&&c.IsActive == true).ToList();
             return View(studentDashboardVM);
         }
     }

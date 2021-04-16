@@ -128,5 +128,32 @@ namespace TeachersCommunity.Areas.Admin.Controllers
             }
             base.Dispose(disposing);
         }
+        public ActionResult ActivateTeachers()
+        {
+            var teacherTbls = db.TeacherTbls.Include(t => t.CredentialTbl);
+            return View(teacherTbls.ToList());
+        }
+        public ActionResult StatusChange(long? id)
+        {
+            TeacherTbl teacherTbl = db.TeacherTbls.Find(id);
+            if(teacherTbl.IsActive!=null)
+            {
+                if (Convert.ToBoolean(teacherTbl.IsActive))
+                {
+                    teacherTbl.IsActive = false;
+                }
+                else
+                {
+                    teacherTbl.IsActive = true;
+                }
+            }
+            else
+            {
+                teacherTbl.IsActive = true;
+            }
+            db.Entry(teacherTbl).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("ActivateTeachers");
+        }
     }
 }

@@ -36,6 +36,7 @@ namespace TeachersCommunity.Models
         public string OnlineTime { get; set; }
         public string Days { get; set; }
         public string DemoClassURL { get; set; }
+        public Nullable<bool> IsActive { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AnswersTbl> AnswersTbls { get; set; }
