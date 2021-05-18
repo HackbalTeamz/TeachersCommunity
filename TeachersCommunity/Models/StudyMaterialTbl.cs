@@ -15,12 +15,15 @@ namespace TeachersCommunity.Models
     public partial class StudyMaterialTbl
     {
         public long MaterialID { get; set; }
-        public long SubjectID { get; set; }
+        public long StudentID { get; set; }
         public Nullable<long> TeacherID { get; set; }
         public string MaterialName { get; set; }
         public string MaterialDetails { get; set; }
         public string MaterilaLink { get; set; }
         public System.DateTime CreatedOn { get; set; }
         public Nullable<System.DateTime> UpdatedOn { get; set; }
+    
+        public virtual StudentTbl StudentTbl { get; set; }
+        public virtual TeacherTbl TeacherTbl { get; set; }
     }
 }

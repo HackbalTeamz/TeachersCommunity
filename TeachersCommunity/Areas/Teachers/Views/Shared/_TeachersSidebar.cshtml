@@ -22,9 +22,14 @@
                     <i class="fa fa-dashboard"></i> <span>Profile</span>
                 </a>
             </li>
-            <li class="@Html.IsSelected(controller: "Teachers")">
+            <li class="@Html.IsSelected(controller: "StudentList")">
                 <a href="@Url.Action("Index", "StudentList")">
                     <i class="fa fa-dashboard"></i> <span>StudentList</span>
+                </a>
+            </li>
+            <li class="@Html.IsSelected(controller: "StudyMaterialTbls")">
+                <a href="@Url.Action("Index", "StudyMaterialTbls")">
+                    <i class="fa fa-dashboard"></i> <span>Study Meterials</span>
                 </a>
             </li>
             @*<li class="@Html.IsSelected(controller: "ParentTbls") treeview">

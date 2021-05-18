@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TeachersCommunity.Models.StudyMaterialTbl>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaterialName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaterialDetails)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaterilaLink)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.StudentTbl.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeacherTbl.FullName)
+        </th>
+        <th></th>*@
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaterialName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaterialDetails)
+        </td>
+        <td>
+            <a target="_blank" href="~/StudyMeterials/@Html.DisplayFor(modelItem => item.MaterilaLink)">Download</a>
+        </td>
+    </tr>
+}
+
+</table>

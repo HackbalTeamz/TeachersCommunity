@@ -5955,6 +5955,16 @@
     <Content Include="fonts\LoginPage\Poppins-Bold.ttf" />
     <Content Include="fonts\LoginPage\Poppins-Medium.ttf" />
     <Content Include="fonts\LoginPage\Poppins-Regular.ttf" />
+    <Content Include="Areas\Teachers\Views\StudyMaterialTbls\Create.cshtml" />
+    <Content Include="Areas\Teachers\Views\StudyMaterialTbls\Delete.cshtml" />
+    <Content Include="Areas\Teachers\Views\StudyMaterialTbls\Details.cshtml" />
+    <Content Include="Areas\Teachers\Views\StudyMaterialTbls\Edit.cshtml" />
+    <Content Include="Areas\Teachers\Views\StudyMaterialTbls\Index.cshtml" />
+    <Content Include="Areas\Student\Views\StudyMaterialTbls\Create.cshtml" />
+    <Content Include="Areas\Student\Views\StudyMaterialTbls\Delete.cshtml" />
+    <Content Include="Areas\Student\Views\StudyMaterialTbls\Details.cshtml" />
+    <Content Include="Areas\Student\Views\StudyMaterialTbls\Edit.cshtml" />
+    <Content Include="Areas\Student\Views\StudyMaterialTbls\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\HomePage\aos.js" />
     <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />
@@ -5998,9 +6008,11 @@
     <Compile Include="Areas\Admin\Controllers\TeacherTblsController.cs" />
     <Compile Include="Areas\Student\Controllers\SearchTeachersController.cs" />
     <Compile Include="Areas\Student\Controllers\StudentController.cs" />
+    <Compile Include="Areas\Student\Controllers\StudyMaterialTblsController.cs" />
     <Compile Include="Areas\Student\Controllers\TeacherDetailsController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Areas\Teachers\Controllers\StudentListController.cs" />
+    <Compile Include="Areas\Teachers\Controllers\StudyMaterialTblsController.cs" />
     <Compile Include="Areas\Teachers\Controllers\TeachersController.cs" />
     <Compile Include="Areas\Teachers\TeachersAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -6131,6 +6143,7 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Student\Data\" />
     <Folder Include="Areas\Teachers\Data\" />
+    <Folder Include="StudyMeterials\" />
     <Folder Include="Views\AdminTbls\" />
   </ItemGroup>
   <ItemGroup>

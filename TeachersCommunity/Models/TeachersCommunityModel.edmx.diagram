@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="TeachersCommunityModel.QuestionTbl" Width="1.5" PointX="7.5" PointY="9.5" />
         <EntityTypeShape EntityType="TeachersCommunityModel.RoleTbl" Width="1.5" PointX="0.75" PointY="8.25" />
         <EntityTypeShape EntityType="TeachersCommunityModel.StudentTbl" Width="1.5" PointX="5.25" PointY="5.5" />
-        <EntityTypeShape EntityType="TeachersCommunityModel.StudyMaterialTbl" Width="1.5" PointX="7.75" PointY="0.75" />
         <EntityTypeShape EntityType="TeachersCommunityModel.SubjectTbl" Width="1.5" PointX="9.75" PointY="0.75" />
         <EntityTypeShape EntityType="TeachersCommunityModel.TeachersStudentTbl" Width="1.5" PointX="7.5" PointY="6.5" />
         <EntityTypeShape EntityType="TeachersCommunityModel.TeacherTbl" Width="1.5" PointX="5.25" PointY="10.625" />
@@ -27,6 +26,9 @@
         <AssociationConnector Association="TeachersCommunityModel.FK_TeachersStudentTbl_TeacherTbl" />
         <EntityTypeShape EntityType="TeachersCommunityModel.EmailConfigTbl" Width="1.5" PointX="10.375" PointY="3.75" />
         <EntityTypeShape EntityType="TeachersCommunityModel.StoreTbl" Width="1.5" PointX="10.375" PointY="7.75" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.StudyMaterialTbl" Width="1.5" PointX="7.5" PointY="13" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_StudyMaterialTbl_StudentTbl" />
+        <AssociationConnector Association="TeachersCommunityModel.FK_StudyMaterialTbl_TeacherTbl" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

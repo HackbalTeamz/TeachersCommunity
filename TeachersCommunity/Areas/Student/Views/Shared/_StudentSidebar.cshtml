@@ -47,6 +47,11 @@
                 <i class="fa fa-dashboard"></i> <span>Pending Teachers</span>
             </a>
         </li>
+        <li class="@Html.IsSelected(controller: "StudyMaterialTbls")">
+            <a href="@Url.Action("Index", "StudyMaterialTbls")">
+                <i class="fa fa-dashboard"></i> <span>StudyMaterialTbls</span>
+            </a>
+        </li>
         @*<li class="@Html.IsSelected(controller: "VideoConference") treeview">
             <a href="@Url.Action("LiveClass", "VideoConference")">
                 <i class="fa fa-television"></i> <span>Classroom</span>

@@ -1,0 +1,74 @@
+﻿@model TeachersCommunity.Models.StudyMaterialTbl
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudyMaterialTbl</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterilaLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterilaLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentTbl.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentTbl.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeacherTbl.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherTbl.FullName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaterialID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
