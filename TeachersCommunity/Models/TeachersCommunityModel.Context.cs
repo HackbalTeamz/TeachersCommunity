@@ -29,14 +29,15 @@ namespace TeachersCommunity.Models
         public virtual DbSet<AnswersTbl> AnswersTbls { get; set; }
         public virtual DbSet<AppointmentsTbl> AppointmentsTbls { get; set; }
         public virtual DbSet<CredentialTbl> CredentialTbls { get; set; }
+        public virtual DbSet<EmailConfigTbl> EmailConfigTbls { get; set; }
         public virtual DbSet<QuestionTbl> QuestionTbls { get; set; }
         public virtual DbSet<RoleTbl> RoleTbls { get; set; }
+        public virtual DbSet<StoreTbl> StoreTbls { get; set; }
         public virtual DbSet<StudentTbl> StudentTbls { get; set; }
+        public virtual DbSet<StudyMaterialTbl> StudyMaterialTbls { get; set; }
         public virtual DbSet<SubjectTbl> SubjectTbls { get; set; }
         public virtual DbSet<TeachersStudentTbl> TeachersStudentTbls { get; set; }
         public virtual DbSet<TeacherTbl> TeacherTbls { get; set; }
-        public virtual DbSet<EmailConfigTbl> EmailConfigTbls { get; set; }
-        public virtual DbSet<StoreTbl> StoreTbls { get; set; }
-        public virtual DbSet<StudyMaterialTbl> StudyMaterialTbls { get; set; }
+        public virtual DbSet<RateTbl> RateTbls { get; set; }
     }
 }

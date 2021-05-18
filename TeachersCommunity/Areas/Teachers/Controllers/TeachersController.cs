@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
+using System.IO;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using TeachersCommunity.Models;
@@ -21,8 +23,19 @@ namespace TeachersCommunity.Areas.Teachers.Controllers
             return View(teacherTbl);
         }
         [HttpPost]
-        public ActionResult ProfileEdit(TeacherTbl teachers)
+        public ActionResult ProfileEdit(TeacherTbl teachers, HttpPostedFileBase file)
         {
+            if (file.ContentLength > 0)
+            {
+                string _Extenstion = Path.GetExtension(file.FileName);
+                if (_Extenstion == ".pdf")
+                {
+                    string _FileName = Path.GetFileName(file.FileName);
+                    string _path = Path.Combine(Server.MapPath("~/Certificates"), _FileName);  //Folder Name ee Blue
+                    file.SaveAs(_path);
+                    teachers.Certificate = _FileName;
+                }
+            }
             db.Entry(teachers).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Dashboard");

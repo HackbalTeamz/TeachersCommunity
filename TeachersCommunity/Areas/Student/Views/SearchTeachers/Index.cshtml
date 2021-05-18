@@ -45,14 +45,31 @@
                         <span class="info-box-icon bg-aqua"><i class="fa fa-video-camera"></i></span>
                         <div class="info-box-content">
                             <span class="info-box-text">@item.FullName</span>
-                            @*<span class="info-box-number">0 Videos</span>*@
+                            @{
+                                if (item.RateTbls.Count != 0)
+                                {
+                                    int count = item.RateTbls.Count;
+                                    decimal sum = 0;
+                                    foreach(var item2 in item.RateTbls)
+                                    {
+                                        sum = sum + item2.Rate;
+                                    }
+                                    decimal rating = sum / count;
+                                    <span class="info-box-number">@rating /5</span>
+                                }
+                                else
+                                {
+                                    <span class="info-box-number">0 /5</span>
+                                }
+
+                            }
                         </div>
                     </div>
                 </div>
             </a>
-                    }
+                                    }
 
-            }
+                                }
 
         </div>
     </section>

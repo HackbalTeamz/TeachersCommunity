@@ -21,6 +21,8 @@ namespace TeachersCommunity.Areas.Student.Controllers
         {
             StudentDashboardVM studentDashboardVM = new StudentDashboardVM();
             studentDashboardVM.teacherTbllist = db.TeacherTbls.Where(c => c.Location.Contains(Location)&&c.IsActive == true).ToList();
+            studentDashboardVM.fullteacherTbllist = db.TeacherTbls.ToList();
+
             return View(studentDashboardVM);
         }
     }

@@ -18,8 +18,9 @@ namespace TeachersCommunity.Models
         public TeacherTbl()
         {
             this.AnswersTbls = new HashSet<AnswersTbl>();
-            this.TeachersStudentTbls = new HashSet<TeachersStudentTbl>();
             this.StudyMaterialTbls = new HashSet<StudyMaterialTbl>();
+            this.TeachersStudentTbls = new HashSet<TeachersStudentTbl>();
+            this.RateTbls = new HashSet<RateTbl>();
         }
     
         public long TeacherID { get; set; }
@@ -38,13 +39,17 @@ namespace TeachersCommunity.Models
         public string Days { get; set; }
         public string DemoClassURL { get; set; }
         public Nullable<bool> IsActive { get; set; }
+        public string HighestEducation { get; set; }
+        public string Certificate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AnswersTbl> AnswersTbls { get; set; }
         public virtual CredentialTbl CredentialTbl { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StudyMaterialTbl> StudyMaterialTbls { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TeachersStudentTbl> TeachersStudentTbls { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StudyMaterialTbl> StudyMaterialTbls { get; set; }
+        public virtual ICollection<RateTbl> RateTbls { get; set; }
     }
 }

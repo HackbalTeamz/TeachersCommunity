@@ -5965,6 +5965,11 @@
     <Content Include="Areas\Student\Views\StudyMaterialTbls\Details.cshtml" />
     <Content Include="Areas\Student\Views\StudyMaterialTbls\Edit.cshtml" />
     <Content Include="Areas\Student\Views\StudyMaterialTbls\Index.cshtml" />
+    <Content Include="Areas\Student\Views\RateTbls\Create.cshtml" />
+    <Content Include="Areas\Student\Views\RateTbls\Delete.cshtml" />
+    <Content Include="Areas\Student\Views\RateTbls\Details.cshtml" />
+    <Content Include="Areas\Student\Views\RateTbls\Edit.cshtml" />
+    <Content Include="Areas\Student\Views\RateTbls\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\HomePage\aos.js" />
     <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />
@@ -6006,6 +6011,7 @@
     <Compile Include="Areas\Admin\Controllers\RoleTblsController.cs" />
     <Compile Include="Areas\Admin\Controllers\StudentTblsController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherTblsController.cs" />
+    <Compile Include="Areas\Student\Controllers\RateTblsController.cs" />
     <Compile Include="Areas\Student\Controllers\SearchTeachersController.cs" />
     <Compile Include="Areas\Student\Controllers\StudentController.cs" />
     <Compile Include="Areas\Student\Controllers\StudyMaterialTblsController.cs" />
@@ -6044,6 +6050,9 @@
       <DependentUpon>TeachersCommunityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\QuestionTbl.cs">
+      <DependentUpon>TeachersCommunityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RateTbl.cs">
       <DependentUpon>TeachersCommunityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RoleTbl.cs">
@@ -6143,6 +6152,7 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Student\Data\" />
     <Folder Include="Areas\Teachers\Data\" />
+    <Folder Include="Certificates\" />
     <Folder Include="StudyMeterials\" />
     <Folder Include="Views\AdminTbls\" />
   </ItemGroup>

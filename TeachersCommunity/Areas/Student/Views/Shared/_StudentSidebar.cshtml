@@ -49,7 +49,12 @@
         </li>
         <li class="@Html.IsSelected(controller: "StudyMaterialTbls")">
             <a href="@Url.Action("Index", "StudyMaterialTbls")">
-                <i class="fa fa-dashboard"></i> <span>StudyMaterialTbls</span>
+                <i class="fa fa-dashboard"></i> <span>Study Materials</span>
+            </a>
+        </li>
+        <li class="@Html.IsSelected(controller: "RateTbls")">
+            <a href="@Url.Action("Index", "RateTbls")">
+                <i class="fa fa-dashboard"></i> <span>Rate</span>
             </a>
         </li>
         @*<li class="@Html.IsSelected(controller: "VideoConference") treeview">
