@@ -1799,8 +1799,12 @@
     <Content Include="Content\LoginPage\style.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="DataBase\Schema.sql" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\HomePage\boxicons.svg" />
+    <Content Include="fonts\HomePage\remixicon.svg" />
+    <Content Include="fonts\HomePage\remixicon.symbol.svg" />
+    <Content Include="fonts\LoginPage\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\about.jpg" />
     <Content Include="Images\apple-touch-icon.png" />
@@ -5933,6 +5937,24 @@
     <Content Include="Areas\Admin\Views\TeacherTbls\ActivateTeachers.cshtml" />
     <Content Include="Areas\Student\Views\TeacherDetails\ApprovedTeachersList.cshtml" />
     <Content Include="Areas\Student\Views\TeacherDetails\PendingTeachersList.cshtml" />
+    <Content Include="fonts\HomePage\remixicon.eot" />
+    <Content Include="fonts\HomePage\remixicon.less" />
+    <Content Include="fonts\HomePage\remixicon.ttf" />
+    <Content Include="fonts\HomePage\remixicon.woff" />
+    <Content Include="fonts\HomePage\remixicon.woff2" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\LoginPage\fontawesome-webfont.eot" />
+    <Content Include="fonts\LoginPage\fontawesome-webfont.ttf" />
+    <Content Include="fonts\LoginPage\fontawesome-webfont.woff" />
+    <Content Include="fonts\LoginPage\fontawesome-webfont.woff2" />
+    <Content Include="fonts\LoginPage\Montserrat-Bold.ttf" />
+    <Content Include="fonts\LoginPage\Poppins-Bold.ttf" />
+    <Content Include="fonts\LoginPage\Poppins-Medium.ttf" />
+    <Content Include="fonts\LoginPage\Poppins-Regular.ttf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\HomePage\aos.js" />
     <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />
@@ -6109,7 +6131,6 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Student\Data\" />
     <Folder Include="Areas\Teachers\Data\" />
-    <Folder Include="Content\LoginPanel\" />
     <Folder Include="Views\AdminTbls\" />
   </ItemGroup>
   <ItemGroup>
