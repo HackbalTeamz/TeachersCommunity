@@ -1,0 +1,92 @@
+﻿@model IEnumerable<TeachersCommunity.Models.TeacherTbl>
+
+@{
+    ViewBag.Title = "TeachersList";
+}
+
+<h2>TeachersList</h2>
+<p>
+    <a href="~/Student/Student/Dashboard">Back</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnterdOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsOffline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OfflineTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsOnline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OnlineTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Days)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnterdOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsOffline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfflineTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsOnline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OnlineTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Days)
+        </td>
+    </tr>
+}
+
+</table>

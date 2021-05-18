@@ -112,6 +112,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Template\EmailTemplate.html" />
+    <Content Include="App_Data\Template\InvoiceTemplate.html" />
+    <Content Include="App_Data\Template\PFCourse.html" />
+    <Content Include="App_Data\Template\WelcomeEmailTemplate.html" />
     <Content Include="Content\AdminPanel\css\AdminLTE.css" />
     <Content Include="Content\AdminPanel\css\AdminLTE.min.css" />
     <Content Include="Content\AdminPanel\css\alt\AdminLTE-bootstrap-social.css" />
@@ -5927,6 +5931,8 @@
     <Content Include="Areas\Admin\Views\StudentTbls\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\StudentTbls\Index.cshtml" />
     <Content Include="Areas\Admin\Views\TeacherTbls\ActivateTeachers.cshtml" />
+    <Content Include="Areas\Student\Views\TeacherDetails\ApprovedTeachersList.cshtml" />
+    <Content Include="Areas\Student\Views\TeacherDetails\PendingTeachersList.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\HomePage\aos.js" />
     <Content Include="Scripts\HomePage\bootstrap.bundle.min.js" />
