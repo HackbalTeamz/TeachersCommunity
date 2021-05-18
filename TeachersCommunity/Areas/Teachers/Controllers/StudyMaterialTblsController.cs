@@ -41,7 +41,13 @@ namespace TeachersCommunity.Areas.Teachers.Controllers
         // GET: Teachers/StudyMaterialTbls/Create
         public ActionResult Create()
         {
-            ViewBag.StudentID = new SelectList(db.StudentTbls, "StudentID", "Name");
+            List<StudentTbl> studentTbls = new List<StudentTbl>();
+            long TeacherID = Convert.ToInt64(FormsAuthentication.Decrypt(HttpContext.Request.Cookies[FormsAuthentication.FormsCookieName].Value).Name.Split('|')[0]);
+            foreach (var item in db.TeachersStudentTbls.Where(x=>x.TeacherId == TeacherID))
+            {
+                studentTbls.AddRange(db.StudentTbls.Where(x => x.StudentID == item.StudentId));
+            }
+            ViewBag.StudentID = new SelectList(studentTbls, "StudentID", "Name");
             ViewBag.TeacherID = new SelectList(db.TeacherTbls, "TeacherID", "FullName");
             return View();
         }
