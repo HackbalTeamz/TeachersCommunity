@@ -1,4 +1,4 @@
-﻿@model TeachersCommunity.RegistrationVM
+﻿
 @{
     ViewBag.Title = "Email Verification";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
@@ -22,7 +22,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Register</title>
+    <title>Email Verification</title>
 
     <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
     <meta name="robots" content="noindex">
@@ -49,43 +49,26 @@
             </div>
             <div class="card bg-transparent">
                 <div class="card-header bg-white center">
-                    <h4 class="card-title">Register</h4>
+                    <h4 class="card-title">Email Verification</h4>
                     <p class="card-subtitle">Access your account</p>
                 </div>
                 <div class="p-a-2">
                     @using (Html.BeginForm())
                     {
-                        @Html.AntiForgeryToken()
                         <div class="form-group">
-                            @Html.DropDownList("credentialTbl.RoleID", ViewBag.RoleID as SelectList, htmlAttributes: new { @class = "form-control" })
+                            <input type="email" name="Email" class="form-control" placeholder="Email Address">
                         </div>
                         <div class="form-group">
-                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder="Name" } })
-                        </div>
-                        <div class="form-group">
-                            @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control", @placeholder = "Location" } })
-                        </div>
-                        <div class="form-group">
-                            @Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control", @placeholder = "Gender" } })
-                        </div>
-                        <div class="form-group">
-                            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", @placeholder = "Phone" } })
-                        </div>
-                        <div class="form-group">
-                            @Html.EditorFor(model => model.credentialTbl.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email" } })
-                        </div>
-                        <div class="form-group">
-                            @Html.EditorFor(model => model.credentialTbl.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Password", @type = "password" } })
+                            <input type="text" name="EmailVerificationCode" class="form-control" placeholder="Email Verification Code">
                         </div>
                         <div class="form-group ">
                             <button type="submit" class="btn  btn-primary  btn-block btn-rounded">
-                                Register
+                                Verify
                             </button>
                         </div>
 
                     }
                 </div>
-
             </div>
         </div>
     </div>

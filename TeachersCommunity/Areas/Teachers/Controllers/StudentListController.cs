@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -18,6 +19,15 @@ namespace TeachersCommunity.Areas.Teachers.Controllers
             var studentTbls = db.TeachersStudentTbls.Where(x=>x.TeacherId == TeacherID).Select(x=>x.StudentTbl).ToList();
             return View(studentTbls.ToList());
             //return View();
+        }
+        public ActionResult Approve(long id)
+        {
+            long TeacherID = Convert.ToInt64(FormsAuthentication.Decrypt(HttpContext.Request.Cookies[FormsAuthentication.FormsCookieName].Value).Name.Split('|')[0]);
+            TeachersStudentTbl TeachersStudentTbls = db.TeachersStudentTbls.Where(x => x.TeacherId == TeacherID & x.StudentId == id).FirstOrDefault();
+            TeachersStudentTbls.IsApprove = true;
+            db.Entry(TeachersStudentTbls).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

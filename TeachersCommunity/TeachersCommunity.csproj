@@ -6089,8 +6089,9 @@
     <Content Include="Views\CredentialTbls\Details.cshtml" />
     <Content Include="Views\CredentialTbls\Edit.cshtml" />
     <Content Include="Views\CredentialTbls\Index.cshtml" />
+    <Content Include="Views\Account\RegisterOld.cshtml" />
+    <Content Include="Views\Account\EmailVerification.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

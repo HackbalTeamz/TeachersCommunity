@@ -11,9 +11,7 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CountryID)
-        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -50,50 +48,50 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CountryID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gender)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DOB)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Phone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HighestQualification)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CurrentStatus)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProfilePic)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EnteredOn)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdatedOn)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CredentialTbl.Email)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.StudentID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.StudentID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighestQualification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfilePic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnteredOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CredentialTbl.Email)
+            </td>
+            @if (item.TeachersStudentTbls.FirstOrDefault().IsApprove == false)
+            {
+                <td>
+                    @Html.ActionLink("Approve", "Approve", new { id = item.StudentID })
+                </td>
+            }
+        </tr>
+    }
 
 </table>
