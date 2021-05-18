@@ -36,5 +36,7 @@ namespace TeachersCommunity.Models
         public virtual DbSet<SubjectTbl> SubjectTbls { get; set; }
         public virtual DbSet<TeachersStudentTbl> TeachersStudentTbls { get; set; }
         public virtual DbSet<TeacherTbl> TeacherTbls { get; set; }
+        public virtual DbSet<EmailConfigTbl> EmailConfigTbls { get; set; }
+        public virtual DbSet<StoreTbl> StoreTbls { get; set; }
     }
 }

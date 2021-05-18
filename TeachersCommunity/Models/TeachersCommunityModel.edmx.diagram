@@ -25,6 +25,8 @@
         <AssociationConnector Association="TeachersCommunityModel.FK_QuestionTbl_QuestionTbl" />
         <AssociationConnector Association="TeachersCommunityModel.FK_TeachersStudentTbl_StudentTbl" />
         <AssociationConnector Association="TeachersCommunityModel.FK_TeachersStudentTbl_TeacherTbl" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.EmailConfigTbl" Width="1.5" PointX="10.375" PointY="3.75" />
+        <EntityTypeShape EntityType="TeachersCommunityModel.StoreTbl" Width="1.5" PointX="10.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -58,6 +58,21 @@
           <Property Name="EnteredOn" Type="datetime" Nullable="false" />
           <Property Name="UpdatedOn" Type="datetime" />
         </EntityType>
+        <EntityType Name="EmailConfigTbl">
+          <Key>
+            <PropertyRef Name="EmailConfigID" />
+          </Key>
+          <Property Name="EmailConfigID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="EmailPassword" Type="varchar" MaxLength="100" />
+          <Property Name="EmailPort" Type="int" />
+          <Property Name="EmailHost" Type="varchar" MaxLength="100" />
+          <Property Name="EnableSSL" Type="bit" />
+          <Property Name="UseDefaultCred" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="EnteredOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+        </EntityType>
         <EntityType Name="QuestionTbl">
           <Key>
             <PropertyRef Name="QuestID" />
@@ -74,6 +89,16 @@
           </Key>
           <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RoleName" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StoreTbl">
+          <Key>
+            <PropertyRef Name="StoreID" />
+          </Key>
+          <Property Name="StoreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StoreURL" Type="varchar" MaxLength="50" />
+          <Property Name="EnteredOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="UpdatedOn" Type="datetime" />
         </EntityType>
         <EntityType Name="StudentTbl">
           <Key>
@@ -256,8 +281,10 @@
           <EntitySet Name="AnswersTbl" EntityType="Self.AnswersTbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AppointmentsTbl" EntityType="Self.AppointmentsTbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CredentialTbl" EntityType="Self.CredentialTbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmailConfigTbl" EntityType="Self.EmailConfigTbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QuestionTbl" EntityType="Self.QuestionTbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RoleTbl" EntityType="Self.RoleTbl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StoreTbl" EntityType="Self.StoreTbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StudentTbl" EntityType="Self.StudentTbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StudyMaterialTbl" EntityType="Self.StudyMaterialTbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SubjectTbl" EntityType="Self.SubjectTbl" Schema="dbo" store:Type="Tables" />
@@ -352,6 +379,8 @@
             <End Role="TeacherTbl" EntitySet="TeacherTbls" />
             <End Role="TeachersStudentTbl" EntitySet="TeachersStudentTbls" />
           </AssociationSet>
+          <EntitySet Name="EmailConfigTbls" EntityType="TeachersCommunityModel.EmailConfigTbl" />
+          <EntitySet Name="StoreTbls" EntityType="TeachersCommunityModel.StoreTbl" />
         </EntityContainer>
         <EntityType Name="AdminTbl">
           <Key>
@@ -617,6 +646,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="EmailConfigTbl">
+          <Key>
+            <PropertyRef Name="EmailConfigID" />
+          </Key>
+          <Property Name="EmailConfigID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EmailPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EmailPort" Type="Int32" />
+          <Property Name="EmailHost" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EnableSSL" Type="Boolean" />
+          <Property Name="UseDefaultCred" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="EnteredOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="StoreTbl">
+          <Key>
+            <PropertyRef Name="StoreID" />
+          </Key>
+          <Property Name="StoreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StoreURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EnteredOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -769,6 +823,33 @@
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="CredID" ColumnName="CredID" />
                 <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmailConfigTbls">
+            <EntityTypeMapping TypeName="TeachersCommunityModel.EmailConfigTbl">
+              <MappingFragment StoreEntitySet="EmailConfigTbl">
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="EnteredOn" ColumnName="EnteredOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UseDefaultCred" ColumnName="UseDefaultCred" />
+                <ScalarProperty Name="EnableSSL" ColumnName="EnableSSL" />
+                <ScalarProperty Name="EmailHost" ColumnName="EmailHost" />
+                <ScalarProperty Name="EmailPort" ColumnName="EmailPort" />
+                <ScalarProperty Name="EmailPassword" ColumnName="EmailPassword" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmailConfigID" ColumnName="EmailConfigID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StoreTbls">
+            <EntityTypeMapping TypeName="TeachersCommunityModel.StoreTbl">
+              <MappingFragment StoreEntitySet="StoreTbl">
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="EnteredOn" ColumnName="EnteredOn" />
+                <ScalarProperty Name="StoreURL" ColumnName="StoreURL" />
+                <ScalarProperty Name="StoreID" ColumnName="StoreID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
